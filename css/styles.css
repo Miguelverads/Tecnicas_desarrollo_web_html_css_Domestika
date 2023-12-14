@@ -192,31 +192,33 @@ nav li a:hover {
 .info {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "subTittle subTittle subTittle subTittle subTittle ."
+        "text text text text. button"
+        "text text text text . ."
+    ;
     background-color: rgba(29, 42, 16, 0.95);
     color: antiquewhite;
     align-self: center;
-    padding: 0.44rem;
+    padding: 0.66rem;
     border-radius: 0.55rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     margin-bottom: 0.22rem;
 }
 
 .subTittle {
-    grid-column: 1 / 5;
-    grid-row: 1;
+    grid-area: subTittle;
     align-self: flex-start;
 }
 
 .text {
-    grid-column: 1 / 5;
-    grid-row: 2;
+    grid-area: text;
     align-self: center;
 }
 
 .button {
-    grid-column: 6;
-    grid-row: 2;
+    grid-area: button;
     justify-self: center;
     align-self: center;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -400,14 +402,14 @@ color: #060D08; rgb(6, 13, 8)
     margin-bottom: 1.0rem;
     font-size: 1.2rem;
     color: rgb(205, 138, 57);
-    
+
 }
 
 fieldset {
     border: none;
     margin-top: 1.8rem;
     color: #1D2A10;
-} 
+}
 
 input,
 textarea {
@@ -418,14 +420,14 @@ textarea {
     background-color: rgb(205, 138, 57);
     color: #1D2A10;
     border: none;
-    padding: 0.44rem; 
+    padding: 0.44rem;
 }
 
 .inline {
     width: unset;
     margin: 0 0.2rem 0 0;
     vertical-align: middle;
-    
+
 }
 
 .checkbox {
@@ -442,7 +444,7 @@ input[type="submit"] {
     border-radius: 0.55rem;
     color: rgb(205, 138, 57);
     font-size: 1.1rem;
-    margin: 1.0rem 0  1.0rem 0;
+    margin: 1.0rem 0 1.0rem 0;
 }
 
 /* FOOTER´S STYLES */
